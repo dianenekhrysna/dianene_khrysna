@@ -42,7 +42,7 @@ sum(multiples)
 score <- c(72, 86, 92, 63, 88, 89, 91, 92, 75, 75, 77)
 score[2]
 score[3]
-
+#.
 a <- c(1, 2, NA, 4, NA, 6, 7)
 print(a, na.print = "-999")
 
