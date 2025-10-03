@@ -1,6 +1,5 @@
 #1a. 
-
-vector1 <- c (-5:5)
+ vector1 <- c (-5:5)
 vector1
 #the output is a numbers from -5 to 5
 
@@ -20,29 +19,126 @@ ages <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27,
 24,33, 41, 53, 40, 18, 44, 38, 41, 48, 27, 39, 19, 30, 61, 54, 58, 26,
 18.)
 
-#a.
+#3a.
 ages [3]
 #the value is 22
 
-#b.
+#3b.
 ages [c(2,4)]
 #the values are 28 and 26
 
-#c.
+#3c.
 ages[-1]
 #all values except 34
 
+#4
+x<- c("first" = 3, "second" = 0, "third" = 9)
+x
+
+#4a
+x[c("first", "third")]
+#the output is the elements with their names
+
+#4b(RESULT)
+#> 
+#  > #a
+#  > x[c("first", "third")]
+#first third 
+#3     9 
+#> #4
+#  > x<- c("first" = 3, "second" = 0, "third" = 9)
+#> x
+#first second  third 
+#3      0      9 
+#> 
+#  > #a
+#  > x[c("first", "third")]
+#first third 
+#3     9 
+#> 
+
+#5
+x <- seq(-3:2)
+
+#5a
+x[2] <-0
+x
+#a sequence from -3 to 2 where the second element was replaced with zero
+
+#5b(RESULT)
+#> #5
+#  > x <- seq(-3:2)
+#> 
+#  > #5a
+#  > x[2] <-0
+#> x
+#[1] 1 0 3 4 5 6
+#>
+
+#6a
+month <- c("Jan", "Feb", "March", "Apr", "May", "June")
+price <- c(52.50, 57.56, 60.00, 65.00, 74.25, 54.00)
+purchase <- c(25, 30, 40, 50, 10, 45)
+
+fuel.data <- data.frame(month, price, purchase)
+fuel.data
+
+#6b
+avg_expenditure <- weighted.mean(price, purchase)
+avg_expenditure
+#the average is 59.309
+
+#7a.
+#Type “rivers” in your R console. Create a vector data with 7
+# elements, containing the number of elements (length) in rivers,
+# their sum (sum), mean (mean), median (median), variance (var)
+# standard deviation (sd), minimum (min) and maximum (max).
+data <- c(length(rivers), sum(rivers), mean(rivers), median(rivers), var(rivers),
+          sd(rivers), min(rivers), max(rivers))
+data
+
+#7b. What are the results?
+# the result are 141, 83357, 591.1844, 425, 243908, 493, 135,  and 3710 correspondingly
 
 
+#7c. Write the code and its outputs.
+#data <- c(length(rivers), sum(rivers), mean(rivers), median(rivers), var(rivers),
+#          +           sd(rivers), min(rivers), max(rivers))
+#> data <- c(length(rivers), sum(rivers), mean(rivers), median(rivers), var(rivers),
+#            +           sd(rivers), min(rivers), max(rivers))
+#> data
+#[1]    141.0000  83357.0000    591.1844    425.0000 243908.4086    493.8708    135.0000   3710.0000
+
+#8a.
+#Create vectors according to the above table. Write the codes.
+Power_Ranking <- c(1:25)
+
+Celebrity_Name <- c(
+  "Tom Cruise", "Rolling Stones", "Oprah Winfrey", "U2", "Tiger Woods", 
+  "Steven Spielberg", "Howard Stern", "50 Cent", "Cast of the Sopranos", 
+  "Dan Brown", "Bruce Springsteen", "Donald Trump", "Muhammad Ali", 
+  "Paul McCartney", "George Lucas", "Elton John", "David Letterman", 
+  "Phil Mickelson", "J.K Rowling", "Bradd Pitt", "Peter Jackson", 
+  "Dr. Phil McGraw", "Jay Lenon", "Celine Dion", "Kobe Bryant"
+)
+
+Pay_Millions <- c(
+  67, 90, 225, 110, 90, 332, 302, 41, 52, 88, 55, 44, 55, 
+  40, 233, 34, 40, 47, 75, 25, 39, 45, 32, 40, 31
+)
+
+#8b. Modify the power ranking and pay of J.K. Rowling. Change power ranking to 15 and pay to 90. Write the codes and its output.
+Power_Ranking[19] <- 15
+Pay_Millions[19] <- 90
 
 
+#8c. Interpret the data.
+Modified_Data <- data.frame(
+  Ranking = Power_Ranking, 
+  Celebrity = Celebrity_Name, 
+  Pay = Pay_Millions)
 
-
-
-
-
-
-
+Modified_Data
 
 
 
